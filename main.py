@@ -1,6 +1,7 @@
 #import de module
 from tkinter import *
 import os
+import setting
 
 #information logicielle
 title = 'gestach'
