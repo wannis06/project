@@ -15,6 +15,7 @@ description = ''
 def creat_file(username):
     os.mkdir(f'C:/Users/{username}/Documents/gestach')
 
+
 #créeation des variable de base
 master = Tk()
 username = os.environ.get( "USERNAME" )
@@ -29,12 +30,12 @@ master.config(menu = menubar)
 #fichier
 menufichier = Menu(menubar, tearoff=0)
 menubar.add_cascade(label="Fichier", menu = menufichier)
+menufichier.add_command(label = 'ouvrire')
 
 #preference
 menupreference = Menu(menubar, tearoff=0)
 menubar.add_cascade(label = 'preference', menu = menupreference)
-menupreference.add_cascade(label="Fichier", menu = menupreference)
-menupreference.add_command(label = 'setting')
+menupreference.add_command(label = 'setting', command = setting.aff_setting)
 
 #boucle tkinter
 master.mainloop()
