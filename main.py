@@ -22,5 +22,19 @@ username = os.environ.get( "USERNAME" )
 #creeation de la fenetre principale
 master.geometry('920x720')
 
+#creeation du menu pricipale
+menubar = Menu(master)
+master.config(menu = menubar)
+
+#fichier
+menufichier = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="Fichier", menu = menufichier)
+
+#preference
+menupreference = Menu(menubar, tearoff=0)
+menubar.add_cascade(label = 'preference', menu = menupreference)
+menupreference.add_cascade(label="Fichier", menu = menupreference)
+menupreference.add_command(label = 'setting')
+
 #boucle tkinter
 master.mainloop()
