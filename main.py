@@ -8,9 +8,12 @@ version = 'alpha 0.1'
 author = 'Yannis Legros'
 description = ''
 
+#creeation des fonction du logicielle
+
 #creeation du fichier du logicielle dans les doc
 def creat_file(username):
     os.mkdir(f'C:/Users/{username}/Documents/gestach')
+
 #créeation des variable de base
 master = Tk()
 username = os.environ.get( "USERNAME" )
