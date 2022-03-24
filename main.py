@@ -1,4 +1,5 @@
 #import de module
+from distutils.log import error
 from tkinter import *
 import os
 import setting
@@ -13,8 +14,14 @@ description = ''
 
 #creeation du fichier du logicielle dans les doc
 def creat_file(username):
-    os.mkdir(f'C:/Users/{username}/Documents/gestach')
-
+    try:
+        os.mkdir(f'C:/Users/{username}/Documents/gestach')
+    except FileExistsError:
+        print('file exist')
+    except:
+        return 'error'
+    else:
+        os.mkdir(f'C:/Users/{username}/Documents/gestach')
 
 #créeation des variable de base
 master = Tk()
@@ -39,3 +46,4 @@ menupreference.add_command(label = 'setting', command = setting.aff_setting)
 
 #boucle tkinter
 master.mainloop()
+creat_file(username)
