@@ -46,4 +46,3 @@ menupreference.add_command(label = 'setting', command = setting.aff_setting)
 
 #boucle tkinter
 master.mainloop()
-creat_file(username)
